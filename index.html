@@ -19,15 +19,20 @@
 <body>
     <div id="header">
         <div class="container">
-            <nav>
+            <nav id="navbar">
                 <img src="./data/img/logo/dark-mode.png" class="logo"/>
                 <p id="msg">(My pookie bear Josh)</p>
                 <ul>
-                    <li><a href="#home">// Home</a></li>
+                    <li><a href="#header">// Home</a></li>
                     <li><a href="#expertise">// Expertise</a></li>
-                    <li><a href="#aboutme">// About Me</a></li>
-                    <li><a href="#experience">// Experience</a></li>
-                    <li><a href="#contact">// Contact Me</a></li>
+                    <li><a href="#skills">// About Me</a></li>
+                    <li><a href="#aboutme">// Resume</a></li>
+                    <li><a href="#info">// Info</a></li>
+                    
+                    <li><a href="https://www.linkedin.com/in/ray-arcand" target="_blank"> 
+                        <img id="liimg"src="./data/img/icons/Linkedinlogo.png" alt="LinkedIn" /></a></li>
+                    <li><a href="https://github.com/Okuhama" target="_blank"> 
+                            <img id="liimg"src="./data/img/icons/giticon.png" alt="Github" /></a></li>
                 </ul>
             </nav>
 
@@ -72,25 +77,83 @@
                         <img src="./data/img/icons/node-js.png"/>
                         <h1>Backend Development</h1>
                         <div>
-                            <h3><br/>Experience with API Development and Data Management with JavaScript, Python, Java<br/></h3>
+                            <h3><br/>Experience with API Development and Data Management with JavaScript, Python, Java.<br/></h3>
                         </div>
                     </div>
                 </li>
             </ul>
         </div>
-        <img src="./data/img/bg/code-image.png"/>
+        
+        
+        
+        <img src="./data/img/bg/code-image.png"  id="logoid"/>
+          
     </div>
-
-    <div class="sectionheading" id="aboutme">
-        <h1>About Me</h1>
-
-    </div>
-    <div class="sectionheading" id="experience">
+    <h1 id="skills">
+        Skills
+    </h1>
+    <div class="coding-language-circles">
+        <img src="./data/img/icons/html.png" alt="Circle 1" class="circle">
+        <img src="./data/img/icons/icons8-c-480.png" alt="Circle 2" class="circle">
+        <img src="./data/img/icons/icons8-css-logo-480.png" alt="Circle 3" class="circle">
+        <img src="./data/img/icons/icons8-javascript-240.png" alt="Circle 4" class="circle">
+        <img src="./data/img/icons/icons8-python-480.png" alt="Circle 5" class="circle">
+        <img src="./data/img/icons/java.png" alt="Circle 6" class="circle">
+        <img src="./data/img/icons/node.png" alt="Circle 7" class="circle">
+        <img src="./data/img/icons/react.png" alt="Circle 8" class="circle">
+    </div> 
+    
+    <section id="main">
+        <div class="sectionheading" id="aboutme">
+            <h1>About Me</h1> <br/>
+            
+        </div>
+        <p class="description">
+            I'm an aspiring quant. developer and high school student at <b class="purple">Prosper High School </b>
+        </p>
+    </section>
+    
+    <div class="sectionheading" id="resume">
         <h1>Resume </h1>
         
     </div>
-    <div class="sectionheading" id="contact">
-        <h1>Contact</h1>
+    <div id="resumeimg">
+        <img src="./data/img/icons/Resume1.png" alt="Resume1"/> 
+        <img src="./data/img/icons/Resume1.png" alt="Resume1"/>
     </div>
+    
+    <div class="sectionheading" id="info">
+        <h1>Info</h1>
+    </div>
+    <h3 class="description" id="quote">
+        Quote
+    </h3>
+    <p id="quotetext" class="description">
+        “You don’t become confident by shouting affirmations in the mirror, but by having a stack of undeniable proof that you are who you say you are. Outwork your self doubt.”
+        <br/><br/> <b class="purple"> -Alex Hormozi</b>
+    </p>
+    <h3 class="description" id="quote">
+        Career Forecast
+    </h3>
+    <p  class="description">
+        Software engineering is one of, if not the fastest growing career today. The median salary is around $120,000, and the career typically has flexible hours. Software engineers typically have remote work, and therefore, are able to travel or live internationally. However, the career requires continuous learning and staying up-to-date with the latest technological developments. Most software engineering roles require a bachelor’s degree, however it’s entirely possible to self-study programming and land a job. Some software engineers will also pursue their master’s or bachelor’s for more specialized fields such as artificial intelligence or quantum computing. Furthermore, it’s essential that any programmer has proficiency in a coding language and certifications are a bonus such as AWS, Cloud Developer certifications, or CyberSecurity certifications. On top of that, software engineers have high job security due to increasing technological development and therefore higher demand. Additionally, nearly all industries from finance to healthcare require software engineers to maintain their data and services. Overall, software engineers contribute to the future of technology and create innovative solutions for the world.
+
+        
+    </p>
+    <h3 class="description" id="quote">
+        Mission Statement
+    </h3>
+    <p  class="description">
+        My mission in Prosper Career Independent Study is to gain first hand experience and insights into the software industry, and possibly pursue an internship. Furthermore, I would like to advance my networking skills, communication, and presentation skills in the program. I will work with my mentor to research and create software-related projects, and hopefully develop a thorough understanding of the software engineering field. 
+    <br id="emptyspace"/>
+
+        
+    </p>
+
+    <footer>
+            <p>
+                Copyright &copy All Rights Reserved
+            </p> 
+    </footer>
 </body>
 </html>

@@ -97,7 +97,7 @@ nav {
     object-fit: cover; /* prevents stretching */
 }
 #msg {
-    margin-left: -33vw;
+    margin-left: -25vw;
 }
 
 nav ul li {
@@ -151,8 +151,8 @@ nav ul li:hover a {
     text-align: center;
     color: white;
     top: 5vh;
-    font-size: 5vw;
-    font-weight: 600;
+    font-size: 3vw;
+    font-weight: 400;
 }
 
 #expertise div {
@@ -255,7 +255,7 @@ nav ul li:hover a {
 
 #expertise img:not(div ul li div img) {
     position: relative;
-    top: -30vh;
+    top: -20vh;
     left: 30vw;
     width: 40vw;
     height: auto;
@@ -266,41 +266,141 @@ nav ul li:hover a {
 #aboutme h1 {
     position: relative;
     color: white;
-    font-size: 5vw;
-    font-weight: 600;
+    font-size: 3vw;
+    font-weight: 400;
+    margin: 3vh;
 }
 
-#aboutme h2 {
-    position: relative;
-    color: white;
-    font-size: 5vw;
-    font-weight: 600;
-}
+
 
 #aboutme img {
     position: relative;
     color: white;
-    font-size: 5vw;
-    font-weight: 600;
+    font-size: 3vw;
+    font-weight: 400;
 }
-#experience h1{
+#resume h1{
     position: relative;
     color: white;
-    font-size: 5vw;
-    font-weight: 600;
+    font-size: 3vw;
+    font-weight: 400;
+    margin: 3vh; 
 }
 .sectionheading{
     display: flex;
-    justify-content: center;
     align-items: center;
+    margin-left: 15vw;
+    
 }
-#contact h1{
+#info h1{
     position: relative;
-    
-    
-    
     color: white;
-    
-    font-size: 5vw;
-    font-weight: 600;
+    font-size: 3vw;
+    font-weight: 400;
+    margin: 3vh;
 }
+.description{
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-bottom: 3vh;
+}
+.purple{
+    color:#DF058D;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+  
+    transition: background-color 0.3s ease;/
+}
+#liimg{
+    height: 3vh;
+    width: auto;    
+    border-radius: 50%;
+}
+body.scrolled #navbar {
+    background-color: #222;
+}
+#quotetext{
+    width: flex;
+}
+p {
+    font-size: large;
+}
+#quote{
+    font-weight: 200vw;
+    font-size: 1.5vw;
+    margin-bottom: 2vh;
+}
+
+footer {
+    text-align: center;
+    background-color: #222; 
+    color: white; 
+    padding: 10px 0; 
+    margin-top: 15vh;
+}
+
+
+
+.coding-language-circles {
+
+    align-items: center;
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    
+}
+
+.coding-language-circles .circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.coding-language-circles .circle:hover {
+    transform: translateY(-10px);
+    background-color: lightgray;
+}
+
+.coding-language-circles .circle img {
+    max-width: 100%; /* Ensure images don't exceed the circle's dimensions */
+    max-height: 100%;
+    display: block; /* Remove any extra spacing */
+    object-fit: cover; /* Ensure the image covers the circle without distortion */
+    border-radius: 50%; /* Maintain the circular shape */
+}
+#skills{
+    position: relative;
+    text-align: center;
+    color: white;
+    margin: 2vh;
+    font-size: 3vw;
+    font-weight: 400;
+}
+#resumeimg {
+    margin-left: 20vw;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    
+    
+}
+
+#resumeimg img {
+    max-width: 50%; /* Limit the maximum width of the images to 50% of their original size */
+    height: auto; /* Allow the height to adjust proportionally to the width */
+   
+}
+
+
+
+

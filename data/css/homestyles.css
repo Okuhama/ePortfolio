@@ -1,0 +1,398 @@
+html{
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "Cascadia Code";
+    src: url(../fonts/Cascadia.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Cascadia Code', Tahoma, Verdana, Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(180deg, #29252d, #1A191D 100%);
+    /*background-color: #1A191D;*/
+    color: #FFFFFF;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/bg/home-cover.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 2% 2%; /* padding for the top and sides of the nav bar items and the logo */
+}
+
+/* the moving "light" effect on the squares */
+.light-circle {
+    position: absolute;
+    left: 57vw;
+    top: 20vh;
+    width: 50px;
+    height: 50px;
+    box-shadow: inset 0 0 30px 0 #fff, inset 20px 0 30px #ffd400, inset -20px 0 30px red, inset 20px 0 300px #ff40d6, inset -20px 0 300px #e3ff4b, 0 0 50px #fff, -10px 0 100px #fbff00, 10px 0 80px #f55;
+    outline-color: rgba(255, 255, 255, 0.75);
+    border-radius: 50%;
+    -webkit-animation: side-to-side 3s linear infinite;
+    -moz-animation: side-to-side 3s linear infinite;
+    animation: side-to-side 3s linear infinite;
+}
+
+/* three different types of keyframes to cover all the different browser types */
+@-webkit-keyframes side-to-side {
+    0% {
+        -webkit-transform: translateX(0);
+    }
+    50% {
+        -webkit-transform: translateX(10px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+    }
+}
+
+@-moz-keyframes side-to-side {
+    0% {
+        -moz-transform: translateX(0);
+    }
+    50% {
+        -moz-transform: translateX(10px);
+    }
+    100% {
+        -moz-transform: translateX(0);
+    }
+}
+
+@keyframes side-to-side {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+nav {
+    display: flex; /* makes images side by side */
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: clamp(100px, 10vw, 10vw); /* sets the min to 100 px and the max to 10vw, but prefers 10vw (the middle) */
+    height: auto;
+    object-fit: cover; /* prevents stretching */
+}
+#msg {
+    margin-left: -25vw;
+}
+
+nav ul li {
+    display: inline-block; /* makes them horizontally aligned */
+    list-style-type: none;
+    margin: 1vw 1vw;
+}
+
+nav ul li a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: clamp(13px, 1vw, 1vw); /* sets the min to 13 px and the max to 1vw, but prefers 1vw (the middle) */
+}
+
+nav ul li:hover a {
+    color: white;
+    transition: 0.5s;
+}
+
+.header-text {
+    position: relative;
+    text-align: center;
+    top: 19vh;
+    color: white;
+}
+
+.header-text h1 {
+    font-size: 10vw;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.header-text h2 {
+    font-size: 2vw;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-arrow {
+    width: 65px; 
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35vh;
+    cursor: pointer;
+}
+
+#expertise h1 {
+    position: relative;
+    text-align: center;
+    color: white;
+    top: 5vh;
+    font-size: 3vw;
+    font-weight: 400;
+}
+
+#expertise div {
+    position: relative;
+    margin: 15vh 10vw;
+    border: 3px solid white;
+}
+
+#expertise div ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#expertise div ul li {
+    flex: 1 1 300px;
+    display: flex;
+}
+
+#expertise div ul li div {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid white;
+    margin: 10px;
+    padding: 20px;
+    width: 100%;
+}
+
+#expertise div ul li div img {
+    margin-top: 3vh;
+    margin-left: 2vw;
+    filter: invert(100%);
+    width: 3vw;
+    height: 3vw;
+}
+
+#expertise div ul li div h1 {
+    position: relative;
+    font-size: 1.5vw;
+    font-weight: 200;
+    text-align: left;
+    margin-left: 7vw;
+    top: -7.5vh;
+    line-height: 2vw;
+}
+
+#expertise div ul li div h1::before {
+    transition: all 0.1s ease-in-out;
+    content: '';
+    position: absolute;
+    bottom: 60%;
+    z-index: -1;
+    height: 0.3em;
+    width: 50%;
+    left: -1%;
+    background: #DF058D;
+}
+
+#expertise div ul li div div {
+    margin-left: 6vw;
+    width: calc(70vw/3 - 7vw);
+    height: auto;
+    border: none;
+}
+
+#expertise div ul li div div::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    background-color: white;
+    border: 0.1px solid white;
+    top: -15vh;
+    margin-left: -1.75vw;
+    opacity: .3;
+}
+
+#expertise div ul li div div h3::before {
+    margin-left: -3vw;
+    content: "<h3>";
+    margin-bottom: 1vh;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+#expertise div ul li div div h3::after {
+    margin-left: -3vw;
+    content: "</h3>";
+    margin-bottom: 1vh;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+#expertise div ul li div div h3 {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1vw;
+    font-weight: 50;
+    margin-top: -5vh;
+    line-height: 1.25vw;
+    padding-bottom: 2vh;
+}
+
+#expertise img:not(div ul li div img) {
+    position: relative;
+    top: -20vh;
+    left: 30vw;
+    width: 40vw;
+    height: auto;
+    z-index: 2;
+    opacity: 15%;
+}
+
+
+
+
+
+#aboutme img {
+    position: relative;
+    color: white;
+    font-size: 3vw;
+    font-weight: 400;
+}
+
+.sectionheading{
+    display: flex;
+    align-items: center;
+    margin-left: 15vw;
+    
+}
+#info h1{
+    position: relative;
+    color: white;
+    font-size: 3vw;
+    font-weight: 400;
+    margin: 3vh;
+}
+.description{
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-bottom: 3vh;
+}
+.purple{
+    color:#DF058D;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+  
+    transition: background-color 0.3s ease;/
+}
+#liimg{
+    height: 3vh;
+    width: auto;    
+    border-radius: 50%;
+}
+body.scrolled #navbar {
+    background-color: #222;
+}
+#quotetext{
+    width: flex;
+}
+p {
+    font-size: large;
+}
+
+footer {
+    text-align: center;
+    background-color: #222; 
+    color: white; 
+    padding: 10px 0; 
+    margin-top: 15vh;
+}
+
+#contact{
+    position: relative;
+    text-align: center;
+    color: white;
+    margin: 2vh;
+    font-size: 3vw;
+    font-weight: 400;
+}
+
+#aboutme{
+    position: relative;
+    text-align: center;
+    color: white;
+    margin: 2vh;
+    font-size: 3vw;
+    font-weight: 400;
+}
+#contact {
+    text-align: center;
+    margin: 50px auto;
+    font-size: 2vh;
+}
+
+.appointment-form form {
+    display: inline-block;
+    text-align: left;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.appointment-form label {
+    display: inline;
+    margin-top: 10px;
+    font-weight: lighter;
+}
+
+.appointment-form input[type="date"],
+.appointment-form input[type="time"],
+.appointment-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.appointment-form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.appointment-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.tutoringtype {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 1.5vh;
+    font-weight: lighter;
+}
+
+

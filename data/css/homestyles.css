@@ -282,6 +282,7 @@ nav ul li:hover a {
     margin-right: 20vw;
     margin-bottom: 3vh;
     text-align: center;
+    align-items: center;
 }
 .purple{
     color:#DF058D;
@@ -328,7 +329,18 @@ footer {
     font-size: 3vw;
     font-weight: 400;
 }
-
+#main{
+    align-items: center;
+}
+#rate {
+    text-align: center;
+  }
+  
+  #rate li {
+    
+    list-style-type: none;
+    padding: 10px;
+  }
 #aboutme{
     position: relative;
     text-align: center;
@@ -337,7 +349,8 @@ footer {
     font-size: 3vw;
     font-weight: 400;
 }
-#contact {
+
+#contact-form {
     text-align: center;
     margin: 50px auto;
     font-size: 2vh;

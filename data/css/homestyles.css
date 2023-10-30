@@ -157,7 +157,7 @@ nav ul li:hover a {
 
 #expertise div {
     position: relative;
-    margin: 15vh 10vw;
+    margin: 10vh 10vw;
     border: 3px solid white;
 }
 
@@ -203,7 +203,7 @@ nav ul li:hover a {
     transition: all 0.1s ease-in-out;
     content: '';
     position: absolute;
-    bottom: 60%;
+    bottom: 30%;
     z-index: -1;
     height: 0.3em;
     width: 50%;
@@ -220,11 +220,10 @@ nav ul li:hover a {
 
 #expertise div ul li div div::after {
     position: absolute;
-    content: '';
+
     width: 0;
     background-color: white;
     border: 0.1px solid white;
-    top: -15vh;
     margin-left: -1.75vw;
     opacity: .3;
 }
@@ -232,35 +231,27 @@ nav ul li:hover a {
 #expertise div ul li div div h3::before {
     margin-left: -3vw;
     content: "<h3>";
-    margin-bottom: 1vh;
+    
     color: rgba(255, 255, 255, 0.3);
 }
 
 #expertise div ul li div div h3::after {
     margin-left: -3vw;
     content: "</h3>";
-    margin-bottom: 1vh;
+
     color: rgba(255, 255, 255, 0.3);
 }
 
 #expertise div ul li div div h3 {
     color: rgba(255, 255, 255, 0.75);
-    font-size: 1vw;
+    font-size: 1.5vw;
     font-weight: 50;
     margin-top: -5vh;
-    line-height: 1.25vw;
-    padding-bottom: 2vh;
+    line-height: 1.5vw;
+
 }
 
-#expertise img:not(div ul li div img) {
-    position: relative;
-    top: -20vh;
-    left: 30vw;
-    width: 40vw;
-    height: auto;
-    z-index: 2;
-    opacity: 15%;
-}
+
 
 
 
@@ -290,6 +281,7 @@ nav ul li:hover a {
     margin-left: 20vw;
     margin-right: 20vw;
     margin-bottom: 3vh;
+    text-align: center;
 }
 .purple{
     color:#DF058D;
@@ -396,3 +388,95 @@ footer {
 }
 
 
+@media only screen and (max-width: 375px) {
+    /* Adjust the properties here for mobile devices */
+    .light-circle {
+        left: 30vw;
+    }
+
+    .header-text h1 {
+        font-size: 8vw;
+    }
+
+    .header-text h2 {
+        font-size: 2.5vw;
+    }
+
+    #expertise h1 {
+        font-size: 5vw;
+    }
+
+    #expertise div {
+        margin: 10vh 5vw;
+    }
+
+    #expertise div ul li div img {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    #expertise div ul li div h1 {
+        font-size: 3vw;
+        margin-left: 4vw;
+        top: -6vh;
+        line-height: 3vw;
+    }
+
+    #expertise img:not(div ul li div img) {
+        top: -30vh;
+        left: 10vw;
+        width: 70vw;
+    }
+
+    .sectionheading{
+        margin-left: 5vw;
+    }
+    
+    #info h1{
+        font-size: 5vw;
+    }
+
+    .description{
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: background-color 0.3s ease;
+    }
+
+    #liimg{
+        height: 5vh;
+    }
+
+    #quotetext{
+        width: 100%;
+    }
+
+    footer {
+        margin-top: 20vh;
+    }
+
+    #contact, #aboutme {
+        font-size: 5vw;
+    }
+
+    #contact {
+        margin: 20px auto;
+        font-size: 3vh;
+    }
+
+    .appointment-form form {
+        padding: 10px;
+    }
+
+    .tutoringtype {
+        font-size: 2vh;
+    }
+}

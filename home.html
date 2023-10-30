@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./data/css/homestyles.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./data/js/utils.js" type="text/javascript"></script>
-
+    <script src="./data/js/script.js" type="text/javascript"></script>
     
     
 </head>
@@ -20,7 +21,7 @@
                     <li><a href="#header">// Home</a></li>
                     <li><a href="#expertise">// Expertise</a></li>
                     <li><a href="#aboutme">// About Me</a></li>
-                    <li><a href="#info">// Contact</a></li>
+                    <li><a href="#contact">// Contact</a></li>
                     
                     <li><a href="https://www.linkedin.com/in/ray-arcand" target="_blank"> 
                         <img id="liimg"src="./data/img/icons/Linkedinlogo.png" alt="LinkedIn" /></a></li>
@@ -97,7 +98,9 @@
     <section id="main">
         <h1 id="aboutme">About Me</h1> <br/>
         <p class="description">
-             High school senior at <b class="purple">Prosper High School</b>.
+             I'm a High school senior at <b class="purple">Prosper High School</b>.
+             <br/> I've taken 12+ AP classes and scored a 1540 SAT. 
+             
         </p>
     </section>
     
@@ -108,15 +111,39 @@
                 <label for="date">Select a Date:</label><br>
                 <input type="date" id="date" name="date"><br><br>
     
-                <label for="time">Select a Time:</label><br>
-                <input type="time" id="time" name="time"><br><br>
+                <label for="start-time">Select a Start Time:</label><br>
+                <select id="start-time" name="start-time">
+                    <option value="17:00">5:00 PM</option>
+                    <option value="17:30">5:30 PM</option>
+                    <option value="18:00">6:00 PM</option>
+                    <option value="18:30">6:30 PM</option>
+                    <option value="19:00">7:00 PM</option>
+                    <option value="19:30">7:30 PM</option>
+                    <option value="20:00">8:00 PM</option>
+                    <option value="20:30">8:30 PM</option>
+                    
+                </select><br><br>
     
-                <label for="topic">Select a Tutoring Topic:</label><br>
+                <label for="end-time">Select an End Time:</label><br>
+                <select id="end-time" name="end-time">
+                    <!-- The options for end time will be dynamically generated based on the start time -->
+                    <!-- Ensure that the end time is after the start time -->
+                </select><br><br>
+    
+                <label for="topic">Select a Tutoring Subject:</label><br>
                 <select id="topic" name="topic">
                     <option value="english">English</option>
                     <option value="math">Math</option>
                     <option value="science">Science</option>
                     <option value="cs">Computer Science</option>
+                </select><br><br>
+    
+                <label for="lesson">Select a Lesson:</label><br>
+                <select id="lesson" name="lesson">
+                    <!-- Add the options for the lessons here -->
+                    <!-- You can dynamically generate options based on the expertise -->
+                    <!-- For example, if 'English' is selected, show relevant subtopics for English -->
+                    <!-- Repeat this for other subjects as well -->
                 </select><br><br>
     
                 <label for="tutoring-type">Tutoring Type:</label><br>
@@ -129,6 +156,9 @@
             </form>
         </div>
     </section>
+    
+    
+    
     
     
     
